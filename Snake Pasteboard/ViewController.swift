@@ -55,8 +55,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionButton(_ sender: Any) {
-        let text = copiedStrings.joined(separator: "\n\n");
-        let controller = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        let controller = UIActivityViewController(activityItems: [textBox.text!], applicationActivities: nil)
         controller.excludedActivityTypes = []
         self.present(controller, animated: true, completion: nil)
     }
