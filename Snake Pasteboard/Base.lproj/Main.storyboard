@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Snake_Paste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqA-2G-JeS">
+                                <rect key="frame" x="0.0" y="44" width="336" height="44"/>
+                                <items>
+                                    <navigationItem title="Snake Paste" id="erf-ls-iGb"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laX-6p-D18">
+                                <rect key="frame" x="0.0" y="805" width="336" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="trash" id="Tdb-8S-KLW">
+                                        <connections>
+                                            <action selector="trashButton:" destination="BYZ-38-t0r" id="zjG-Gf-eVY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="Lqv-Ah-uF8"/>
+                                    <barButtonItem systemItem="action" id="j7T-Qw-hvo">
+                                        <connections>
+                                            <action selector="actionButton:" destination="BYZ-38-t0r" id="W6M-W6-ogG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Snake is ready! Copy a text and come back to see!" translatesAutoresizingMaskIntoConstraints="NO" id="hAS-CW-m9l">
+                                <rect key="frame" x="20" y="88" width="335" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hAS-CW-m9l" firstAttribute="top" secondItem="eqA-2G-JeS" secondAttribute="bottom" id="1Ad-va-3rA"/>
+                            <constraint firstItem="eqA-2G-JeS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="29i-JT-M5F"/>
+                            <constraint firstItem="laX-6p-D18" firstAttribute="top" secondItem="hAS-CW-m9l" secondAttribute="bottom" id="WZS-2k-2Dz"/>
+                            <constraint firstItem="hAS-CW-m9l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wx2-8a-XCk"/>
+                            <constraint firstItem="laX-6p-D18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ztb-Yx-76b"/>
+                            <constraint firstItem="laX-6p-D18" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dCi-0Z-WfX"/>
+                            <constraint firstItem="eqA-2G-JeS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fC5-p2-zlS"/>
+                            <constraint firstItem="laX-6p-D18" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k1O-Xj-SYJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hAS-CW-m9l" secondAttribute="trailing" constant="20" id="q0m-PW-yJQ"/>
+                            <constraint firstItem="eqA-2G-JeS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xlg-3c-CWk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textBox" destination="hAS-CW-m9l" id="I0Q-H0-s7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.43478260869566" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
