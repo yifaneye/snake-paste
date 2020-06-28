@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         guard let text = UIPasteboard.general.string, !copiedStrings.contains(text) else {
             return
         }
+        if (!textBox.text.isEmpty) {
+            copiedStrings = [textBox.text]
+        }
         copiedStrings.append(text)
         showCopy()
         UserDefaults.standard.set(copiedStrings, forKey: DATA_KEY)
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
     func showCopy() {
         textBox.text = ""
         for s in copiedStrings {
-            textBox.text.append("\(s)\n\n\n")
+            textBox.text.append("\(s)\n\n")
         }
     }
     
